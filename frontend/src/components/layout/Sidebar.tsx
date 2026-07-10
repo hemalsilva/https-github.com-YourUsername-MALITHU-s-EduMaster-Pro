@@ -1,54 +1,50 @@
-import React from 'react';
-import { Home, Users, BookOpen, Clock, CreditCard, FileText, Settings, LogOut, GraduationCap, Building } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-
-const menuItems = [
-  { icon: Home, label: 'Dashboard', path: '/dashboard' },
-  { icon: GraduationCap, label: 'Students', path: '/students' },
-  { icon: Users, label: 'Parents', path: '/parents' },
-  { icon: BookOpen, label: 'Teachers', path: '/teachers' },
-  { icon: Building, label: 'Staff', path: '/staff' },
-  { icon: BookOpen, label: 'Subjects', path: '/subjects' },
-  { icon: Clock, label: 'Classes', path: '/classes' },
-  { icon: Clock, label: 'Attendance', path: '/attendance' },
-  { icon: CreditCard, label: 'Payments', path: '/payments' },
-  { icon: FileText, label: 'Reports', path: '/reports' },
-  { icon: Settings, label: 'Settings', path: '/settings' },
-];
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { LayoutDashboard, Users, UserPlus, BookOpen, GraduationCap, Clock, CreditCard, FileText, Settings, Book } from "lucide-react";
 
 export default function Sidebar() {
   const location = useLocation();
 
+  const navItems = [
+    { path: "/dashboard", name: "Dashboard", icon: LayoutDashboard },
+    { path: "/students", name: "Students", icon: Users },
+    { path: "/parents", name: "Parents", icon: UserPlus },
+    { path: "/teachers", name: "Teachers", icon: GraduationCap },
+    { path: "/staff", name: "Staff", icon: Users },
+    { path: "/subjects", name: "Subjects", icon: Book },
+    { path: "/classes", name: "Classes", icon: BookOpen },
+    { path: "/attendance", name: "Attendance", icon: Clock },
+    { path: "/payments", name: "Payments", icon: CreditCard },
+    { path: "/reports", name: "Reports", icon: FileText },
+    { path: "/settings", name: "Settings", icon: Settings },
+  ];
+
   return (
-    <div className="bg-primary text-white w-64 min-h-screen flex flex-col shadow-xl">
-      <div className="p-6 flex items-center gap-3 border-b border-blue-900">
-        <span className="text-secondary text-2xl font-bold">?</span>
-        <h1 className="text-xl font-bold">MALITHU's EduMaster Pro</h1>
+    <div className="w-64 bg-[#0B3C5D] min-h-screen p-4 text-white">
+      <div className="flex items-center gap-2 mb-8 px-2">
+        <BookOpen className="h-8 w-8 text-[#D4AF37]" />
+        <span className="text-xl font-bold font-['Inter']">MALITHU's EduMaster Pro</span>
       </div>
-      <nav className="flex-1 py-4">
-        <ul className="space-y-1 px-3">
-          {menuItems.map((item, index) => {
-            const isActive = location.pathname.startsWith(item.path);
-            return (
-              <li key={index}>
-                <Link
-                  to={item.path}
-                  className={lex items-center gap-3 px-4 py-3 rounded-lg transition-colors }
-                >
-                  <item.icon className="h-5 w-5" />
-                  <span className="font-medium">{item.label}</span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      
+      <nav className="space-y-1">
+        {navItems.map((item) => {
+          const isActive = location.pathname.startsWith(item.path);
+          return (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                isActive 
+                  ? "bg-[#D4AF37] text-[#0B3C5D] font-semibold" 
+                  : "hover:bg-white/10"
+              }`}
+            >
+              <item.icon className="h-5 w-5" />
+              {item.name}
+            </Link>
+          );
+        })}
       </nav>
-      <div className="p-4 border-t border-blue-900">
-        <Link to="/" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-900 text-gray-300 hover:text-white transition-colors">
-          <LogOut className="h-5 w-5" />
-          <span className="font-medium">Logout</span>
-        </Link>
-      </div>
     </div>
   );
 }
