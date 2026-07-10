@@ -91,3 +91,9 @@ EduMaster Pro features seamless API integration with Zoom for online learning.
 - **Auto-Generate Meetings:** Teachers can schedule live classes directly from the ERP.
 - **Student Access:** Students see a "Join Class" button in their portal.
 - **Cloud Recordings:** Automatically fetch and publish Zoom cloud recordings to the student dashboard after the class concludes.
+
+## Virtual Classrooms (Microsoft Teams)
+EduMaster Pro features seamless API integration with Microsoft Teams for online learning.
+- **Auto-Generate Meetings:** Teachers can schedule live MS Teams classes via the Microsoft Graph API.
+- **Student Access:** Students join directly through the portal via deep links.
+- **Recordings:** Sync MS Teams recordings directly to the student dashboard.
