@@ -97,3 +97,9 @@ EduMaster Pro features seamless API integration with Microsoft Teams for online 
 - **Auto-Generate Meetings:** Teachers can schedule live MS Teams classes via the Microsoft Graph API.
 - **Student Access:** Students join directly through the portal via deep links.
 - **Recordings:** Sync MS Teams recordings directly to the student dashboard.
+
+## Automated Cloud Backups (OneDrive)
+EduMaster Pro ensures zero data loss by utilizing automated database and file backups.
+- **Scheduled Backups:** Daily automatic backups run via Laravel Scheduler.
+- **OneDrive Integration:** Backups are securely uploaded to Microsoft OneDrive.
+- **Retention Policy:** Old backups are automatically pruned to save cloud storage space.
