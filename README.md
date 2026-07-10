@@ -85,3 +85,9 @@ EduMaster Pro supports direct integration with ZKTeco and other standard biometr
 - Pull real-time attendance logs directly from the device.
 - Auto-sync users/staff to the machine.
 - Triggers the same WhatsApp parent notifications as the QR Scanner.
+
+## Virtual Classrooms (Zoom Integration)
+EduMaster Pro features seamless API integration with Zoom for online learning.
+- **Auto-Generate Meetings:** Teachers can schedule live classes directly from the ERP.
+- **Student Access:** Students see a "Join Class" button in their portal.
+- **Cloud Recordings:** Automatically fetch and publish Zoom cloud recordings to the student dashboard after the class concludes.
