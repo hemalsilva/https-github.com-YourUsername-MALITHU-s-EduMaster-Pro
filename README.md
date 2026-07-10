@@ -79,3 +79,9 @@ The system automatically sends WhatsApp/Email notifications for:
 4. Attendance Saved in database
 5. WhatsApp notification automatically sent to Parent
 6. Dashboard statistics updated in real-time
+
+## Biometric Fingerprint Machine Integration
+EduMaster Pro supports direct integration with ZKTeco and other standard biometric fingerprint machines over the network (TCP/IP).
+- Pull real-time attendance logs directly from the device.
+- Auto-sync users/staff to the machine.
+- Triggers the same WhatsApp parent notifications as the QR Scanner.
